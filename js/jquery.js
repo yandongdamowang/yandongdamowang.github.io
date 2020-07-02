@@ -817,9 +817,9 @@
 
             // Quick check to determine if target is callable, in the spec
             // this throws a TypeError, but we will just return undefined.
-            if ( !jQuery.isFunction( fn ) ) {
-                return undefined;
-            }
+            // if ( !jQuery.isFunction( fn ) ) {
+            //     return undefined;
+            // }
 
             // Simulated bind
             args = core_slice.call( arguments, 2 );

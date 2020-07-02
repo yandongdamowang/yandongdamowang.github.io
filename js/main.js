@@ -1,6 +1,3 @@
-/**
- * Created by ChengYa on 2016/6/18.
- */
 
 //判断手机类型
 window.onload = function () {
@@ -25,17 +22,9 @@ var date_end;
 date_start = getNowFormatDate();
 //加载图片
 var loading_img_url = [
-    "./image/0001.jpg",
+    "./image/0001.gif",
     "./image/0002.jpg",
-    "./image/0003.jpg",
-    "./image/0004.jpg",
-    "./image/0005.jpg",
-    "./image/0006.jpg",
-    "./image/0007.jpg",
-    "./image/0008.jpg",
-    "./image/0009.jpg",
-    "./image/0010.jpg",
-    "./image/0011.jpg"
+    "./image/0003.jpg"
 ];
 
 //加载页面
@@ -62,18 +51,63 @@ function loading() {
                     //拼接图片
                     $('.shade').hide();
                     var tagHtml = "";
-                    for (var i = 1; i <= 11; i++) {
+                    for (var i = 1; i <= 3; i++) {
                         if (i == 1) {
-                            tagHtml += ' <div id="first" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
-                        } else if (i == 11) {
-                            tagHtml += ' <div id="end" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
-                        } else {
-                            tagHtml += ' <div style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
+                            tagHtml += ' <div id="first" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.gif) center top no-repeat;background-size:100%"></div>';
+                        } else if (i == 2) {
+                            tagHtml += '<div class="0002" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"><img id="0002-1" style="width:43%;position:absolute;top:35%;left:42%;z-index:99" src="./image/0002-1.png"/><img id="0002-2" style="width:39%;position:absolute;top:29%;left:18%;z-index:98" src="./image/0002-5.png"/><img id="0002-3" style="width: 58%; position: absolute; top: 13%; left: 23%; z-index: 97; transform: scale(1);" src="./image/0002-7.png" /><img style="width:78%;position:absolute;bottom: 26%;z-index:999;left:11%" src="./image/0002-2.png"/><img style="width:97%;position:absolute;bottom: 36%;left:2%" src="./image/0002-3.png"/><img id="0002-1-1" style="width:39%;position:absolute;bottom: 46%;left:60%;display:none;" src="./image/0002-4.png"/><img id="0002-2-1" style="width:38%;position:absolute;bottom: 53%;left:2%;display:none;" src="./image/0002-6.png"/><img id="0002-3-1" style="width:38%;position:absolute;bottom: 70%;left:16%;display:none;" src="./image/0002-8.png"/></div>';
+                        }else if(i === 3) {
+                            tagHtml += '<div  style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
                         }
                     }
                     $(".flipbook").append(tagHtml);
                     var w = $(".graph").width();
                     $(".flipbook-viewport").show();
+                });
+                $('.0002').on('touchstart','#0002-3',function(e){
+                    e.stopPropagation()
+                });
+                $('.0002').on('touchend','#0002-3',function(e){
+                    if($("#0002-3-1").css("display")=="none") {
+                        $("#0002-3-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.2)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0002-3-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
+                $('.0002').on('touchstart','#0002-2',function(e){
+                    e.stopPropagation()
+                });
+                $('.0002').on('touchend','#0002-2',function(e){
+                    if($("#0002-2-1").css("display")=="none") {
+                        $("#0002-2-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.2)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0002-2-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
+                $('.0002').on('touchstart','#0002-1',function(e){
+                    e.stopPropagation()
+                });
+                $('.0002').on('touchend','#0002-1',function(e){
+                    if($("#0002-1-1").css("display")=="none") {
+                        $("#0002-1-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.2)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0002-1-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
                 });
                 //配置turn.js
                 function loadApp() {
@@ -106,7 +140,7 @@ function loading() {
                                     $(".btnImg").css("display", "block");
                                     $(".mark").css("display", "none");
                                 }
-                                if (page == 11) {
+                                if (page == 2) {
                                     $(".nextPage").css("display", "none");
                                 } else {
                                     $(".nextPage").css("display", "block");
