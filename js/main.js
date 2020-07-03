@@ -23,8 +23,16 @@ date_start = getNowFormatDate();
 //加载图片
 var loading_img_url = [
     "./image/0001.gif",
-    "./image/0002.jpg",
-    "./image/0003.jpg"
+    "./image/0003.jpg",
+    "./image/0002.gif",
+    "./image/0002-1.png",
+    "./image/0002-2.png",
+    "./image/0002-3.png",
+    "./image/0002-4.png",
+    "./image/0002-5.png",
+    "./image/0002-6.png",
+    "./image/0002-7.png",
+    "./image/0002-8.png",
 ];
 
 //加载页面
@@ -51,14 +59,20 @@ function loading() {
                     //拼接图片
                     $('.shade').hide();
                     var tagHtml = "";
-                    for (var i = 1; i <= 3; i++) {
+                    for (var i = 1; i <= 8; i++) {
                         if (i == 1) {
                             tagHtml += ' <div id="first" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.gif) center top no-repeat;background-size:100%"></div>';
                         } else if (i == 2) {
-                            tagHtml += '<div class="0002" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"><img id="0002-1" style="width:43%;position:absolute;top:35%;left:42%;z-index:99" src="./image/0002-1.png"/><img id="0002-2" style="width:39%;position:absolute;top:29%;left:18%;z-index:98" src="./image/0002-5.png"/><img id="0002-3" style="width: 58%; position: absolute; top: 13%; left: 23%; z-index: 97; transform: scale(1);" src="./image/0002-7.png" /><img style="width:78%;position:absolute;bottom: 26%;z-index:999;left:11%" src="./image/0002-2.png"/><img style="width:97%;position:absolute;bottom: 36%;left:2%" src="./image/0002-3.png"/><img id="0002-1-1" style="width:39%;position:absolute;bottom: 46%;left:60%;display:none;" src="./image/0002-4.png"/><img id="0002-2-1" style="width:38%;position:absolute;bottom: 53%;left:2%;display:none;" src="./image/0002-6.png"/><img id="0002-3-1" style="width:38%;position:absolute;bottom: 70%;left:16%;display:none;" src="./image/0002-8.png"/></div>';
+                            tagHtml += '<div  style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.gif) center top no-repeat;background-size:100%"></div>';
                         }else if(i === 3) {
-                            tagHtml += '<div  style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"></div>';
+                            tagHtml += '<div class="0002" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%"><img id="0002-1" class="dad" style="width:43%;position:absolute;top:35%;left:42%;z-index:99;display:none;" src="./image/0002-1.png"/><img id="0002-2" class="dad" style="width:39%;position:absolute;top:29%;left:18%;z-index:98;display:none" src="./image/0002-5.png"/><img id="0002-3" class="dad" style="width: 58%; position: absolute; top: 13%; left: 23%; z-index: 97; transform: scale(1);display:none" src="./image/0002-7.png" /><img style="width:78%;position:absolute;bottom: 26%;z-index:999;left:11%" src="./image/0002-2.png"/><img style="width:97%;position:absolute;bottom: 36%;left:2%" src="./image/0002-3.png"/><img id="0002-1-1" style="width:39%;position:absolute;bottom: 46%;left:60%;display:none;" src="./image/0002-4.png"/><img id="0002-2-1" style="width:38%;position:absolute;bottom: 53%;left:2%;display:none;" src="./image/0002-6.png"/><img id="0002-3-1" style="width:38%;position:absolute;bottom: 70%;left:16%;display:none;" src="./image/0002-8.png"/><div id="0002-1-2" style="width:8px;height:8px;border-radius:50%;position:absolute;top:50%;left:73%;background-color:#fff;z-index:999;animation: warn 1s linear infinite;display:none"><div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear .5s infinite;"></div><div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear 1s infinite;"></div></div><div id="0002-2-2" style="width:8px;height:8px;border-radius:50%;position:absolute;top:30%;left:58%;background-color:#fff;z-index:999;animation: warn 1s linear infinite;display:none">    <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear .5s infinite;"></div>    <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear 1s infinite;"></div></div><div id="0002-3-2" style="width:8px;height:8px;border-radius:50%;position:absolute;top:44%;left:26%;background-color:#fff;z-index:999;animation: warn 1s linear infinite;display:none"> <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear .5s infinite;"></div><div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear 1s infinite;"></div></div></div>';
+                        }else if(i === 4) {
+                            tagHtml += '<div class="0004" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%">       <img id="0004-1" class="dad" style="width:40%;position:absolute;top:36%;left:43%;z-index:999;display:none;" src="./image/0004-1.png"/>       <img id="0004-2" class="dad" style="width:51%;position:absolute;top:36%;left:14%;z-index:100;display:none" src="./image/0004-5.png"/>       <img id="0004-3" class="dad" style="width: 49%; position: absolute; top: 14%; left: 42%; z-index: 97; transform: scale(1);display:none" src="./image/0004-7.png" />       <img id="0004-4" class="dad" style="width: 49%; position: absolute; top: 15%; left: 12%; z-index: 97; transform: scale(1);display:none" src="./image/0004-9.png" />       <img style="width:78%;position:absolute;bottom: 26%;z-index:999;left:11%" src="./image/0004-2.png"/>       <img style="width:97%;position:absolute;bottom: 36%;left:2%" src="./image/0004-3.png"/>       <img id="0004-1-1" style="width:39%;position:absolute;bottom: 46%;left:60%;display:none;z-index:100" src="./image/0004-4.png"/>       <img id="0004-2-1" style="width:38%;position:absolute;bottom: 42%;left:2%;display:none;z-index:98" src="./image/0004-6.png"/>       <img id="0004-3-1" style="width:38%;position:absolute;bottom: 68%;left:58%;display:none;" src="./image/0004-8.png"/>       <img id="0004-4-1" style="width:38%;position:absolute;bottom: 64%;left:2%;display:none;" src="./image/0004-10.png"/>   <div id="0004-1-2" style="width:8px;height:8px;border-radius:50%;position:absolute;top:50%;left:73%;background-color:#fff;z-index:999;animation: warn 1s linear infinite;display:none">       <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear .5s infinite;"></div>       <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear 1s infinite;"></div>   </div>   <div id="0004-2-2" style="width:8px;height:8px;border-radius:50%;position:absolute;top:31%;left:72%;background-color:#fff;z-index:999;animation: warn 1s linear infinite;display:none">           <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear .5s infinite;"></div>           <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear 1s infinite;"></div>       </div>       <div id="0004-3-2" style="width:8px;height:8px;border-radius:50%;position:absolute;top:56%;left:26%;background-color:#fff;z-index:999;animation: warn 1s linear infinite;display:none">               <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear .5s infinite;"></div>               <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear 1s infinite;"></div>           </div>           <div id="0004-4-2" style="width:8px;height:8px;border-radius:50%;position:absolute;top:36%;left:26%;background-color:#fff;z-index:999;animation: warn 1s linear infinite;display:none">                <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear .5s infinite;"></div>                <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear 1s infinite;"></div>      </div>      </div>';
+                        }else if(i === 5) {
+                            console.log(1)
+                            tagHtml += '<div class="0005" style="background:url(image/00' + (i < 10 ? '0' + i : i) + '.jpg) center top no-repeat;background-size:100%">    <img id="0005-1" class="dad" style="width:40%;position:absolute;top:36%;left:43%;z-index:999;display:none;" src="./image/0005-1.png"/>    <img id="0005-2" class="dad" style="width:51%;position:absolute;top:36%;left:14%;z-index:100;display:none" src="./image/0005-5.png"/>    <img id="0005-3" class="dad" style="width: 49%; position: absolute; top: 14%; left: 42%; z-index: 97; transform: scale(1);display:none" src="./image/0005-7.png" />    <img id="0005-4" class="dad" style="width: 49%; position: absolute; top: 15%; left: 12%; z-index: 97; transform: scale(1);display:none" src="./image/0005-9.png" />    <img style="width:78%;position:absolute;bottom: 26%;z-index:999;left:11%" src="./image/0005-2.png"/>    <img style="width:97%;position:absolute;bottom: 36%;left:2%" src="./image/0005-3.png"/>    <img id="0005-1-1" style="width:39%;position:absolute;bottom: 46%;left:60%;display:none;z-index:100" src="./image/0005-4.png"/>    <img id="0005-2-1" style="width:38%;position:absolute;bottom: 42%;left:2%;display:none;z-index:98" src="./image/0005-6.png"/>    <img id="0005-3-1" style="width:38%;position:absolute;bottom: 68%;left:58%;display:none;" src="./image/0005-8.png"/>    <img id="0005-4-1" style="width:38%;position:absolute;bottom: 64%;left:2%;display:none;" src="./image/0005-10.png"/><div id="0005-1-2" style="width:8px;height:8px;border-radius:50%;position:absolute;top:50%;left:73%;background-color:#fff;z-index:999;animation: warn 1s linear infinite;display:none">    <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear .5s infinite;"></div>    <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear 1s infinite;"></div></div><div id="0005-2-2" style="width:8px;height:8px;border-radius:50%;position:absolute;top:31%;left:72%;background-color:#fff;z-index:999;animation: warn 1s linear infinite;display:none">        <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear .5s infinite;"></div>        <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear 1s infinite;"></div>    </div>    <div id="0005-3-2" style="width:8px;height:8px;border-radius:50%;position:absolute;top:56%;left:26%;background-color:#fff;z-index:999;animation: warn 1s linear infinite;display:none">            <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear .5s infinite;"></div>            <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear 1s infinite;"></div>        </div>        <div id="0005-4-2" style="width:8px;height:8px;border-radius:50%;position:absolute;top:36%;left:26%;background-color:#fff;z-index:999;animation: warn 1s linear infinite;display:none">             <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear .5s infinite;"></div>             <div style="position: absolute;top:0;left:0;width: 8px;height: 8px; border-radius:50%;box-shadow: 0 0 8px #fff;animation: warn 1s linear 1s infinite;"></div>         </div>         </div>';
                         }
+                       
                     }
                     $(".flipbook").append(tagHtml);
                     var w = $(".graph").width();
@@ -70,7 +84,7 @@ function loading() {
                 $('.0002').on('touchend','#0002-3',function(e){
                     if($("#0002-3-1").css("display")=="none") {
                         $("#0002-3-1").fadeIn('slow')
-                        $(this).css("transform","scale(1.2)")
+                        $(this).css("transform","scale(1.08)")
                         e.stopPropagation()
                     }else {
                         $("#0002-3-1").fadeOut('slow')
@@ -85,7 +99,7 @@ function loading() {
                 $('.0002').on('touchend','#0002-2',function(e){
                     if($("#0002-2-1").css("display")=="none") {
                         $("#0002-2-1").fadeIn('slow')
-                        $(this).css("transform","scale(1.2)")
+                        $(this).css("transform","scale(1.08)")
                         e.stopPropagation()
                     }else {
                         $("#0002-2-1").fadeOut('slow')
@@ -100,10 +114,130 @@ function loading() {
                 $('.0002').on('touchend','#0002-1',function(e){
                     if($("#0002-1-1").css("display")=="none") {
                         $("#0002-1-1").fadeIn('slow')
-                        $(this).css("transform","scale(1.2)")
+                        $(this).css("transform","scale(1.08)")
                         e.stopPropagation()
                     }else {
                         $("#0002-1-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
+                $('.0004').on('touchstart','#0004-3',function(e){
+                    e.stopPropagation()
+                });
+                $('.0004').on('touchend','#0004-3',function(e){
+                    if($("#0004-3-1").css("display")=="none") {
+                        $("#0004-3-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.08)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0004-3-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
+                $('.0004').on('touchstart','#0004-2',function(e){
+                    e.stopPropagation()
+                });
+                $('.0004').on('touchend','#0004-2',function(e){
+                    if($("#0004-2-1").css("display")=="none") {
+                        $("#0004-2-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.08)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0004-2-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
+                $('.0004').on('touchstart','#0004-1',function(e){
+                    e.stopPropagation()
+                });
+                $('.0004').on('touchend','#0004-1',function(e){
+                    if($("#0004-1-1").css("display")=="none") {
+                        $("#0004-1-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.08)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0004-1-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
+                $('.0004').on('touchstart','#0004-4',function(e){
+                    e.stopPropagation()
+                });
+                $('.0004').on('touchend','#0004-4',function(e){
+                    if($("#0004-4-1").css("display")=="none") {
+                        $("#0004-4-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.08)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0004-4-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
+                $('.0005').on('touchstart','#0005-3',function(e){
+                    e.stopPropagation()
+                });
+                $('.0005').on('touchend','#0005-3',function(e){
+                    if($("#0005-3-1").css("display")=="none") {
+                        $("#0005-3-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.08)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0005-3-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
+                $('.0005').on('touchstart','#0005-2',function(e){
+                    e.stopPropagation()
+                });
+                $('.0005').on('touchend','#0005-2',function(e){
+                    if($("#0005-2-1").css("display")=="none") {
+                        $("#0005-2-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.08)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0005-2-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
+                $('.0005').on('touchstart','#0005-1',function(e){
+                    e.stopPropagation()
+                });
+                $('.0005').on('touchend','#0005-1',function(e){
+                    if($("#0005-1-1").css("display")=="none") {
+                        $("#0005-1-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.08)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0005-1-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
+                $('.0005').on('touchstart','#0005-4',function(e){
+                    e.stopPropagation()
+                });
+                $('.0005').on('touchend','#0005-4',function(e){
+                    if($("#0005-4-1").css("display")=="none") {
+                        $("#0005-4-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.08)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0005-4-1").fadeOut('slow')
                         $(this).css("transform","scale(1.0)")
                         e.stopPropagation()
                     }
@@ -144,6 +278,32 @@ function loading() {
                                     $(".nextPage").css("display", "none");
                                 } else {
                                     $(".nextPage").css("display", "block");
+                                }
+                                if(page == 3)  {
+                                    $('#0002-1').stop().fadeIn(2000).siblings('#0002-1-2').css('display','block')
+                                    $('#0002-2').stop().fadeIn(2000).siblings('#0002-2-2').css('display','block')
+                                    $('#0002-3').stop().fadeIn(2000).siblings('#0002-3-2').css('display','block')
+                                
+                                }else {
+                                    $('#0002-1').css('display','none').siblings('[id]').css('display','none')
+                                }
+                                if(page == 4)  {
+                                    $('#0004-1').stop().fadeIn(2000).siblings('#0004-1-2').css('display','block')
+                                    $('#0004-2').stop().fadeIn(2000).siblings('#0004-2-2').css('display','block')
+                                    $('#0004-3').stop().fadeIn(2000).siblings('#0004-3-2').css('display','block')
+                                    $('#0004-4').stop().fadeIn(2000).siblings('#0004-4-2').css('display','block')
+                                
+                                }else {
+                                    $('#0004-1').css('display','none').siblings('[id]').css('display','none')
+                                }
+                                if(page == 5)  {
+                                    $('#0005-1').stop().fadeIn(2000).siblings('#0005-1-2').css('display','block')
+                                    $('#0005-2').stop().fadeIn(2000).siblings('#0005-2-2').css('display','block')
+                                    $('#0005-3').stop().fadeIn(2000).siblings('#0005-3-2').css('display','block')
+                                    $('#0005-4').stop().fadeIn(2000).siblings('#0005-4-2').css('display','block')
+                                
+                                }else {
+                                    $('#0005-1').css('display','none').siblings('[id]').css('display','none')
                                 }
                             },
                             turned: function (e, page, view) {
