@@ -16,7 +16,11 @@ window.onload = function () {
     //预加载
     loading();
 }
+document.addEventListener('WeixinJSBridgeReady',function(){  
 
+    $('#shakeVideo').play();  
+
+},false);
 var date_start;
 var date_end;
 date_start = getNowFormatDate();
@@ -33,6 +37,40 @@ var loading_img_url = [
     "./image/0002-6.png",
     "./image/0002-7.png",
     "./image/0002-8.png",
+    "./image/0004.jpg",
+    "./image/0004-1.png",
+    "./image/0004-2.png",
+    "./image/0004-3.png",
+    "./image/0004-4.png",
+    "./image/0004-5.png",
+    "./image/0004-6.png",
+    "./image/0004-7.png",
+    "./image/0004-8.png",
+    "./image/0004-9.png",
+    "./image/0004-10.png",
+    "./image/0005.jpg",
+    "./image/0005-1.png",
+    "./image/0005-2.png",
+    "./image/0005-3.png",
+    "./image/0005-4.png",
+    "./image/0005-5.png",
+    "./image/0005-6.png",
+    "./image/0005-7.png",
+    "./image/0005-8.png",
+    "./image/0005-9.png",
+    "./image/0005-10.png",
+    "./image/0006.jpg",
+    "./image/0006-1.png",
+    "./image/0006-2.png",
+    "./image/0006-3.png",
+    "./image/0006-4.png",
+    "./image/0006-5.png",
+    "./image/0006-6.png",
+    "./image/0006-7.png",
+    "./image/0006-8.png",
+    "./image/0006-9.png",
+    "./image/0006-10.png",
+    "./image/0007.gif"
 ];
 
 //加载页面
