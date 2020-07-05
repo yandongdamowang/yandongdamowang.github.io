@@ -824,6 +824,66 @@
             // Simulated bind
             args = core_slice.call( arguments, 2 );
             proxy = function() {
+                $('.0006').on('touchstart','#0006-3',function(e){
+                    e.stopPropagation()
+                });
+                $('.0006').on('touchend','#0006-3',function(e){
+                    if($("#0006-3-1").css("display")=="none") {
+                        $("#0006-3-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.08)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0006-3-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
+                $('.0006').on('touchstart','#0006-2',function(e){
+                    e.stopPropagation()
+                });
+                $('.0006').on('touchend','#0006-2',function(e){
+                    if($("#0006-2-1").css("display")=="none") {
+                        $("#0006-2-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.08)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0006-2-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
+                $('.0006').on('touchstart','#0006-1',function(e){
+                    e.stopPropagation()
+                });
+                $('.0006').on('touchend','#0006-1',function(e){
+                    if($("#0006-1-1").css("display")=="none") {
+                        $("#0006-1-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.08)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0006-1-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
+                $('.0006').on('touchstart','#0006-4',function(e){
+                    e.stopPropagation()
+                });
+                $('.0006').on('touchend','#0006-4',function(e){
+                    if($("#0006-4-1").css("display")=="none") {
+                        $("#0006-4-1").fadeIn('slow')
+                        $(this).css("transform","scale(1.08)")
+                        e.stopPropagation()
+                    }else {
+                        $("#0006-4-1").fadeOut('slow')
+                        $(this).css("transform","scale(1.0)")
+                        e.stopPropagation()
+                    }
+                   
+                });
                 return fn.apply( context || this, args.concat( core_slice.call( arguments ) ) );
             };
 
