@@ -87,7 +87,6 @@ function loading() {
         img.onload = function () {
             numbers += (1 / length) * 100;
             $('.number').html(parseInt(numbers) + "%");
-            console.log(numbers);
             if (Math.round(numbers) == 100) {
                 //$('.number').hide();
                 date_end = getNowFormatDate();
